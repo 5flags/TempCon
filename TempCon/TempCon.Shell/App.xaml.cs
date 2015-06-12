@@ -4,6 +4,8 @@ using System.Windows.Media;
 using FirstFloor.ModernUI.Presentation;
 using GalaSoft.MvvmLight.Threading;
 using log4net;
+using Microsoft.Practices.ServiceLocation;
+using TempCon.Shell.ViewModel;
 
 namespace TempCon.Shell
 {

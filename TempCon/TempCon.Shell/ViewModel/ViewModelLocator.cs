@@ -43,6 +43,9 @@ namespace TempCon.Shell.ViewModel
             ////}
 
             SimpleIoc.Default.Register<MainViewModel>();
+            SimpleIoc.Default.Register<LoggingViewModel>();
+
+            var preActivate = ServiceLocator.Current.GetInstance<LoggingViewModel>();
         }
 
         public MainViewModel Main
@@ -51,6 +54,11 @@ namespace TempCon.Shell.ViewModel
             {
                 return ServiceLocator.Current.GetInstance<MainViewModel>();
             }
+        }
+
+        public LoggingViewModel Logging
+        {
+            get { return ServiceLocator.Current.GetInstance<LoggingViewModel>(); }
         }
         
         public static void Cleanup()
